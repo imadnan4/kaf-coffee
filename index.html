@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAF Coffee — Speciality Turkish & Arabic Coffee · F-6 Markaz, Islamabad</title>
+<meta name="description" content="KAF Coffee — قهوة مختصة. Speciality Turkish & Arabic coffee, artisanal teas and Middle Eastern sweets at Roomy Signature Hotel, F-6 Markaz, Islamabad. Open daily 9 AM – 12 AM.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KAF Coffee — Speciality Turkish & Arabic Coffee · F-6 Markaz, Islamabad">
+<meta property="og:description" content="Authentic Turkish & Arabic speciality coffee, artisanal teas and Middle Eastern sweets at Roomy Signature Hotel, F-6 Markaz, Islamabad. Open daily 9 AM – 12 AM.">
+<meta property="og:image" content="images/kaf-hero.jpg">
+<meta property="og:locale" content="en_PK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1C110A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C110A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' font-weight='700' fill='%23F7F0E5' text-anchor='middle'%3EK%3C/text%3E%3Ccircle cx='47' cy='19' r='4' fill='%23C9975C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#F5EEE3; --surface:#FDFAF4; --surface-2:#EFE3D1;
+  --ink:#22150D; --ink-soft:#5F4C3D; --ink-faint:#8A7462;
+  --espresso:#1C110A; --espresso-2:#2A1B11;
+  --cream:#F7F0E5; --cream-dim:rgba(247,240,229,.72);
+  --accent:#A6512D; --accent-hover:#8A3F1F;
+  --brass:#C9975C; --brass-soft:rgba(201,151,92,.28);
+  --line:rgba(34,21,13,.14); --line-cream:rgba(247,240,229,.16);
+  --fs-h1:clamp(2.75rem,7.5vw,5.25rem);
+  --fs-h2:clamp(1.9rem,4.5vw,3rem);
+  --fs-h3:clamp(1.15rem,2vw,1.35rem);
+  --fs-body:1.0625rem; --fs-small:.9rem; --fs-label:.72rem;
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.5rem; --space-6:2.25rem; --space-7:3.5rem; --space-8:6rem;
+  --radius:14px; --radius-lg:22px;
+  --shadow:0 10px 30px rgba(28,17,10,.12); --shadow-lift:0 18px 44px rgba(28,17,10,.2);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Inter",system-ui,sans-serif;
+  --font-arabic:"Amiri",serif;
+  --banner-h:44px; --head-h:78px;
+}
+/* ============ BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html{scroll-padding-top:calc(var(--banner-h) + var(--head-h) + var(--space-3))}
+body{font-family:var(--font-body);font-size:var(--fs-body);line-height:1.65;color:var(--ink);background:radial-gradient(55% 40% at 88% 2%,rgba(201,151,92,.13),transparent 70%),radial-gradient(50% 45% at 4% 98%,rgba(166,81,45,.09),transparent 70%),var(--bg);-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;z-index:1400;pointer-events:none;opacity:.07;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px}
+img{display:block;max-width:100%;height:100%;width:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3{font-family:var(--font-display);line-height:1.08;font-weight:600;text-wrap:balance}
+h1{letter-spacing:-.022em}
+h2{letter-spacing:-.015em}
+h3{letter-spacing:-.01em}
+::selection{background:var(--accent);color:var(--cream)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.container{width:min(1140px,92%);margin-inline:auto}
+.mt-2{margin-top:var(--space-2)}
+.mt-4{margin-top:var(--space-4)}
+.mt-5{margin-top:var(--space-5)}
+.section{padding-block:var(--space-8) calc(var(--space-8)*1.15)}
+.skip{position:absolute;left:-999px;top:0;background:var(--espresso);color:var(--cream);padding:var(--space-2) var(--space-4);z-index:2000}
+.skip:focus{left:var(--space-4);top:var(--space-4)}
+/* ============ PREVIEW BANNER ============ */
+.preview-banner{position:fixed;inset:0 0 auto 0;z-index:1200;background:var(--espresso);color:var(--cream-dim);font-size:.74rem;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:var(--space-3);padding:var(--space-2) var(--space-6);text-align:center;min-height:44px}
+.preview-banner strong{color:var(--brass);font-weight:600}
+.preview-banner button{background:none;border:0;color:var(--cream-dim);font-size:1rem;line-height:1;cursor:pointer;padding:var(--space-1) var(--space-2);transition:color .25s var(--ease),transform .25s var(--ease)}
+.preview-banner button:hover{color:var(--cream);transform:scale(1.15)}
+.preview-banner.dismissed{display:none}
+/* ============ HEADER ============ */
+.site-head{position:fixed;top:var(--banner-h);left:0;right:0;z-index:1100;transition:background .4s var(--ease),box-shadow .4s var(--ease),top .3s var(--ease);color:var(--cream)}
+.head-inner{width:min(1140px,92%);margin-inline:auto;height:var(--head-h);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);transition:height .4s var(--ease)}
+.site-head.scrolled{background:rgba(245,238,227,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line),0 8px 24px rgba(28,17,10,.08);color:var(--ink)}
+.site-head.scrolled .head-inner{height:64px}
+.brand{display:flex;align-items:baseline;gap:var(--space-2);font-family:var(--font-display);font-weight:700;font-size:1.45rem;letter-spacing:.01em}
+.brand .ar{font-family:var(--font-arabic);font-size:1.05rem;color:var(--brass);transform:translateY(-1px)}
+.site-head.scrolled .brand .ar{color:var(--accent)}
+.site-nav ul{display:none}
+.site-nav.open ul{display:flex;flex-direction:column;gap:var(--space-1);padding:var(--space-4) 4% var(--space-5)}
+.site-nav.open{position:absolute;top:100%;left:0;right:0;background:var(--espresso);color:var(--cream);box-shadow:var(--shadow-lift);border-top:1px solid var(--line-cream)}
+.nav-link{font-size:.95rem;font-weight:500;letter-spacing:.02em;padding:var(--space-2) var(--space-1);position:relative;display:inline-block}
+.nav-link::after{content:"";position:absolute;left:0;bottom:2px;height:2px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+.nav-link.active{color:var(--brass)}
+.site-head.scrolled .nav-link.active{color:var(--accent)}
+.site-head.scrolled .nav-link::after{background:var(--accent)}
+.head-actions{display:flex;align-items:center;gap:var(--space-3)}
+.menu-btn{display:inline-flex;background:none;border:0;color:inherit;cursor:pointer;padding:var(--space-2)}
+@media (min-width:860px){
+  .menu-btn{display:none}
+  .site-nav,.site-nav.open{position:static;background:transparent;color:inherit;box-shadow:none;border:0}
+  .site-nav ul,.site-nav.open ul{display:flex;flex-direction:row;gap:var(--space-5);padding:0}
+}
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:var(--space-2);font-family:var(--font-body);font-weight:600;font-size:.95rem;letter-spacing:.01em;padding:.95rem 1.7rem;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(2px)}
+.btn-primary{background:var(--accent);color:var(--cream)}
+.btn-primary:hover{background:var(--accent-hover);box-shadow:var(--shadow-lift)}
+.btn-ghost{border-color:rgba(247,240,229,.4);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(247,240,229,.08)}
+.btn-sm{padding:.6rem 1.2rem;font-size:.85rem}
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;display:flex;align-items:flex-end;color:var(--cream);overflow:hidden;background:var(--espresso)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{animation:kenburns 14s var(--ease) both}
+@keyframes kenburns{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,11,5,.92) 0%,rgba(20,11,5,.55) 45%,rgba(20,11,5,.25) 100%),linear-gradient(100deg,rgba(20,11,5,.65) 0%,rgba(20,11,5,.1) 60%)}
+.hero-content{position:relative;z-index:1;padding-bottom:var(--space-8);width:min(1140px,92%);margin-inline:auto}
+.hero-eyebrow{display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-label);letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin-bottom:var(--space-5)}
+.hero-eyebrow .ar{font-family:var(--font-arabic);font-size:1.15rem;letter-spacing:0;text-transform:none;color:var(--brass)}
+.hero-eyebrow .rule{width:44px;height:1px;background:var(--brass-soft)}
+.hero h1{font-size:var(--fs-h1);font-weight:700;max-width:12ch}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--brass)}
+.hero-sub{margin-top:var(--space-5);max-width:52ch;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.7;color:var(--cream-dim);text-wrap:pretty}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-6)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}
+.chip{display:inline-flex;align-items:center;gap:var(--space-2);font-size:.82rem;letter-spacing:.04em;padding:.5rem 1rem;border:1px solid var(--line-cream);border-radius:8px;color:var(--cream-dim);backdrop-filter:blur(4px)}
+.chip svg{width:14px;height:14px;color:var(--brass)}
+.scroll-cue{position:absolute;left:50%;bottom:var(--space-4);width:1px;height:52px;background:rgba(247,240,229,.25);overflow:hidden;z-index:1}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--brass);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+/* ============ MARQUEE ============ */
+.marquee{background:var(--espresso);color:var(--cream);border-block:1px solid var(--line-cream);overflow:hidden;padding:var(--space-4) 0}
+.marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-group{display:flex;align-items:center;gap:var(--space-6);padding-right:var(--space-6);font-family:var(--font-display);font-style:italic;font-size:1.05rem;letter-spacing:.06em;white-space:nowrap}
+.marquee-group .dot{color:var(--brass);font-style:normal}
+@keyframes marquee{to{transform:translateX(-50%)}}
+/* ============ SECTION HEADS ============ */
+.eyebrow{display:inline-flex;align-items:center;gap:var(--space-3);font-size:var(--fs-label);letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent)}
+.on-dark .eyebrow{color:var(--brass)}
+.on-dark .eyebrow::before{background:var(--brass)}
+.eyebrow-serif{display:inline-flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.15rem;letter-spacing:0;text-transform:none;color:var(--accent)}
+.eyebrow-serif::before{content:"";width:26px;height:1px;background:var(--brass)}
+.section h2{font-size:var(--fs-h2);margin-top:var(--space-4)}
+.section h2 em{font-style:italic;font-weight:500;color:var(--accent)}
+.on-dark h2 em{color:var(--brass)}
+.lede{margin-top:var(--space-4);max-width:60ch;color:var(--ink-soft);line-height:1.7;text-wrap:pretty}
+.on-dark .lede{color:var(--cream-dim)}
+/* ============ ABOUT ============ */
+.about-grid{display:grid;gap:var(--space-7);align-items:center}
+.about-media{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:4/3;background:var(--espresso-2)}
+.about-media img{transition:transform 1.2s var(--ease)}
+.about-media:hover img{transform:scale(1.03)}
+.about-media figcaption{position:absolute;left:var(--space-4);bottom:var(--space-4);background:rgba(28,17,10,.78);color:var(--cream-dim);font-size:.72rem;letter-spacing:.08em;padding:.45rem .9rem;border-radius:6px;backdrop-filter:blur(6px)}
+.about-copy p+p{margin-top:var(--space-4)}
+.about-copy p{color:var(--ink-soft);line-height:1.7;text-wrap:pretty}
+.about-copy .ar-inline{font-family:var(--font-arabic);color:var(--accent);font-size:1.1em}
+.about-quote{margin-top:var(--space-6);padding-left:var(--space-5);border-left:2px solid var(--brass);font-family:var(--font-display);font-style:italic;font-size:1.35rem;line-height:1.4;color:var(--ink)}
+.about-quote small{display:block;margin-top:var(--space-2);font-family:var(--font-body);font-style:normal;font-size:var(--fs-label);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+/* ============ MENU ============ */
+.menu-section{background:var(--surface-2)}
+.menu-grid{display:grid;gap:var(--space-5);margin-top:var(--space-7)}
+.menu-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
+.menu-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:rgba(166,81,45,.35)}
+.card-icon{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(166,81,45,.1);color:var(--accent);transition:background .4s var(--ease),color .4s var(--ease),transform .4s var(--ease)}
+.card-icon svg{width:22px;height:22px}
+.menu-card:hover .card-icon{background:var(--accent);color:var(--cream);transform:rotate(-8deg)}
+.menu-card h3{font-size:var(--fs-h3)}
+.menu-card p{font-size:var(--fs-small);color:var(--ink-soft);line-height:1.6}
+.menu-card .tag{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.45rem;font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:.32rem .7rem}
+.menu-card .tag::before{content:"✦";font-size:.55rem;color:var(--brass);transform:translateY(-1px)}
+.menu-note{margin-top:var(--space-6);font-size:var(--fs-small);color:var(--ink-faint);font-style:italic}
+@media (min-width:640px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.menu-grid{grid-template-columns:repeat(3,1fr);align-items:start}
+  .menu-card:nth-child(3n+2){margin-top:36px}
+}
+/* ============ WHY / FEATURES ============ */
+.why-section{background:radial-gradient(65% 55% at 50% 0%,rgba(201,151,92,.1),transparent 70%),var(--espresso);color:var(--cream);border-block:1px solid var(--line-cream)}
+.feature-grid{display:grid;gap:var(--space-6);margin-top:var(--space-7)}
+.feature{border-top:1px solid var(--line-cream);padding-top:var(--space-5)}
+.feature .card-icon{background:var(--brass-soft);color:var(--brass)}
+.feature:hover .card-icon{background:var(--brass);color:var(--espresso);transform:rotate(-8deg)}
+.feature h3{font-size:var(--fs-h3);margin-top:var(--space-4)}
+.feature p{margin-top:var(--space-2);font-size:var(--fs-small);color:var(--cream-dim);line-height:1.65}
+@media (min-width:640px){.feature-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.feature-grid{grid-template-columns:repeat(4,1fr)}}
+/* ============ QUOTES ============ */
+.quote-head{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4)}
+.badge{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--espresso);color:var(--brass);font-size:.78rem;letter-spacing:.08em;padding:.5rem 1rem;border-radius:8px}
+.quote-grid{display:grid;gap:var(--space-5);margin-top:var(--space-7)}
+.quote-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-6);position:relative;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.quote-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+.quote-card::before{content:"“";font-family:var(--font-display);font-size:4rem;line-height:1;color:var(--brass);position:absolute;top:var(--space-5);right:var(--space-6)}
+.quote-card blockquote{font-family:var(--font-display);font-style:italic;font-size:1.12rem;line-height:1.55;color:var(--ink)}
+.quote-card cite{display:block;margin-top:auto;padding-top:var(--space-4);font-style:normal;font-size:var(--fs-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+@media (min-width:860px){
+  .quote-grid{grid-template-columns:repeat(3,1fr);align-items:start}
+  .quote-card:nth-child(2){margin-top:36px}
+}
+/* ============ GALLERY ============ */
+.gallery-section{background:var(--surface-2)}
+.gallery-grid{display:grid;gap:var(--space-4);margin-top:var(--space-7)}
+.gallery-grid figure{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--espresso-2)}
+.gallery-grid figure.wide{aspect-ratio:16/10}
+.gallery-grid img{transition:transform 1.1s var(--ease)}
+.gallery-grid figure:hover img{transform:scale(1.03)}
+.gallery-grid figcaption{position:absolute;inset:auto 0 0 0;padding:var(--space-5) var(--space-4) var(--space-3);background:linear-gradient(to top,rgba(20,11,5,.85),transparent);color:var(--cream);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+@media (min-width:760px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid figure.wide{grid-column:span 2;aspect-ratio:21/9}
+}
+/* ============ VISIT ============ */
+.visit-grid{display:grid;gap:var(--space-7);margin-top:var(--space-7)}
+.info-list{display:flex;flex-direction:column;gap:var(--space-5)}
+.info-item{display:flex;gap:var(--space-4);align-items:flex-start}
+.info-item .card-icon{flex:none;background:rgba(166,81,45,.1);color:var(--accent)}
+.info-item h3{font-size:1.05rem;font-family:var(--font-body);font-weight:600;letter-spacing:.02em}
+.info-item p,.info-item a{font-size:var(--fs-small);color:var(--ink-soft);line-height:1.6}
+.info-item a:hover{color:var(--accent)}
+.info-item .link-underline{text-decoration:underline;text-underline-offset:3px}
+.socials{display:flex;gap:var(--space-3);margin-top:var(--space-2)}
+.social-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-soft);transition:transform .3s var(--ease),background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.social-btn:hover{transform:translateY(-3px);background:var(--espresso);color:var(--brass);border-color:var(--espresso)}
+.social-btn svg{width:19px;height:19px}
+.btn svg,.card-icon svg,.chip svg,.social-btn svg{stroke-width:1.75}
+.social-btn:active{transform:scale(.94)}
+a[href^="tel"]{font-variant-numeric:tabular-nums}
+.map-wrap{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:380px;background:var(--surface-2)}
+.map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:sepia(.25) saturate(.9)}
+@media (min-width:960px){.visit-grid{grid-template-columns:1fr 1.1fr;align-items:stretch}}
+/* ============ CLOSING CTA ============ */
+.cta-band{margin-top:var(--space-8);background:radial-gradient(70% 60% at 50% 0%,rgba(201,151,92,.14),transparent 70%),radial-gradient(55% 45% at 88% 100%,rgba(166,81,45,.2),transparent 70%),var(--espresso);color:var(--cream);border-radius:var(--radius-lg);padding:var(--space-8) var(--space-6);text-align:center;position:relative;overflow:hidden}
+.cta-band .ar{font-family:var(--font-arabic);color:var(--brass);font-size:1.3rem}
+.cta-band h2{font-size:var(--fs-h2);margin-top:var(--space-3)}
+.cta-band p{margin:var(--space-4) auto 0;max-width:46ch;color:var(--cream-dim);line-height:1.7}
+.cta-band .hero-ctas{justify-content:center;margin-top:var(--space-6)}
+/* ============ FOOTER ============ */
+.site-footer{background:var(--espresso);color:var(--cream-dim);padding:var(--space-8) 0 var(--space-6)}
+.footer-grid{display:grid;gap:var(--space-6)}
+.footer-brand{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--cream)}
+.footer-brand .ar{font-family:var(--font-arabic);color:var(--brass);font-size:1.1rem;margin-left:var(--space-2)}
+.site-footer p{font-size:var(--fs-small);line-height:1.7;max-width:44ch}
+.footer-col h4{font-size:var(--fs-label);letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:var(--space-4)}
+.footer-col ul{display:flex;flex-direction:column;gap:var(--space-2)}
+.footer-col a{font-size:var(--fs-small);transition:color .3s var(--ease)}
+.footer-col a:hover{color:var(--brass)}
+.footer-base{margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--line-cream);display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:space-between;font-size:.76rem;letter-spacing:.04em}
+@media (min-width:860px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+/* ============ REVEAL & MOTION ============ */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  .marquee-track{animation:none}
+  .hero-media img{animation:none}
+}
+</style>
+</head>
+<body>
+<!--
+  ASSET MAP — save the six generated preview images (shown in chat) into ./images/ with these names:
+  images/kaf-hero.jpg      (copper cezve pouring Turkish coffee)   — illustrative preview image
+  images/kaf-interior.jpg  (earthy terracotta café interior)       — illustrative preview image
+  images/kaf-kahwa.jpg     (brass dallah, finjan cups & dates)     — illustrative preview image
+  images/kaf-terrace.jpg   (terrace seating at dusk)               — illustrative preview image
+  images/kaf-desserts.jpg  (saffron cake, lotus cheesecake, latte) — illustrative preview image
+  images/kaf-flatwhite.jpg (flat white in terracotta cup)          — illustrative preview image
+  All imagery is illustrative of the niche — not actual photographs of KAF Coffee.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="preview-banner" id="previewBanner" role="note">
+  <span>This is a free preview site built by <strong>Adnan Ahmad</strong>, showcasing what <strong>KAF Coffee</strong>’s website could look like — not affiliated with the business.</span>
+  <button id="bannerClose" aria-label="Dismiss preview notice">×</button>
+</div>
+
+<header class="site-head" id="siteHead">
+  <div class="head-inner">
+    <a class="brand" href="#top">KAF<span class="ar">كاف</span></a>
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#menu">The Counter</a></li>
+        <li><a class="nav-link" href="#why">Why KAF</a></li>
+        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li><a class="nav-link" href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-primary btn-sm" href="tel:+923100577770">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27 1.27a2 2 0 0 1 .45 2.11L19.09 14.8a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media"><!-- Illustrative preview image — not an actual photo of KAF Coffee -->
+    <img src="images/kaf-hero.jpg" alt="Turkish coffee being poured from a copper cezve into a brass finjan cup on a hammered tray" fetchpriority="high">
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow"><span class="ar">قهوة مختصة</span><span class="rule"></span><span>Speciality Coffee · F-6 Islamabad</span></p>
+    <h1>KAF <em>Coffee</em></h1>
+    <p class="hero-sub">Authentic Turkish &amp; Arabic speciality coffee — brewed fresh, served right — in the heart of F-6 Markaz, Islamabad.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:+923100577770">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27 1.27a2 2 0 0 1 .45 2.11L19.09 14.8a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call +92 310 0577770
+      </a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=KAF+Coffee,+Roomy+Signature+Hotel,+F-6+Markaz,+Islamabad" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Get Directions
+      </a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Open daily · 9 AM – 12 AM</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Roomy Signature Hotel, F-6 Markaz</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>Turkish · Arabic · Speciality</span>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span>Turkish Coffee</span><span class="dot">✦</span><span>Arabic Kahwa &amp; Dates</span><span class="dot">✦</span><span>Flat White</span><span class="dot">✦</span><span>Spanish Latte</span><span class="dot">✦</span><span>Pistachio Latte</span><span class="dot">✦</span><span>Pomegranate Tea</span><span class="dot">✦</span><span>Saffron Cake</span><span class="dot">✦</span><span>Lotus Cheesecake</span><span class="dot">✦</span>
+    </div>
+    <div class="marquee-group">
+      <span>Turkish Coffee</span><span class="dot">✦</span><span>Arabic Kahwa &amp; Dates</span><span class="dot">✦</span><span>Flat White</span><span class="dot">✦</span><span>Spanish Latte</span><span class="dot">✦</span><span>Pistachio Latte</span><span class="dot">✦</span><span>Pomegranate Tea</span><span class="dot">✦</span><span>Saffron Cake</span><span class="dot">✦</span><span>Lotus Cheesecake</span><span class="dot">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <figure class="about-media reveal"><!-- Illustrative preview image — not an actual photo of KAF Coffee -->
+      <img src="images/kaf-flatwhite.jpg" alt="A flat white with rosetta latte art in a terracotta ceramic cup" loading="lazy">
+      <figcaption>Illustrative preview image</figcaption>
+    </figure>
+    <div class="about-copy reveal">
+      <p class="eyebrow-serif">The KAF experience</p>
+      <h2>A little piece of the <em>Middle East</em> in F-6</h2>
+      <p class="mt-5">Tucked inside Roomy Signature Hotel on Agha Khan Road, KAF is Islamabad’s home for <span class="ar-inline">قهوة مختصة</span> — speciality coffee. It’s an authentic, artisanal Arabic coffee and tea experience with eclectic Middle Eastern flavours, from slow-brewed Turkish coffee to cardamom-scented qahwa served the traditional way with dates.</p>
+      <p>The room balances elegance with comfort — earthy tones, Arabic details and a terrace that comes alive at night — a well-known hub for the city’s Arab community and for anyone serious about a good cup.</p>
+      <blockquote class="about-quote">“Brewed fresh. Served right.”<small>— @kaf_pk</small></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="section menu-section" id="menu">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">From the Counter</p>
+      <h2>What’s <em>pouring</em> at KAF</h2>
+      <p class="lede">A glimpse of the counter, drawn from what KAF actually serves and what guests keep ordering.</p>
+    </div>
+    <div class="menu-grid" data-stagger>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></span>
+        <h3>Turkish Coffee</h3>
+        <p>The house specialty — slow-brewed, rich and smooth, exactly the way guests remember it.</p>
+        <span class="tag">House Specialty</span>
+      </article>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></span>
+        <h3>Arabic Kahwa &amp; Dates</h3>
+        <p>Authentic qahwa scented with cardamom, cloves and saffron — served the traditional way, with dates.</p>
+        <span class="tag">Traditional</span>
+      </article>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+        <h3>Espresso &amp; Flat Whites</h3>
+        <p>Specialty espresso drinks, led by a flat white guests call “super smooth and creamy”.</p>
+        <span class="tag">Guest Favourite</span>
+      </article>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M12 8V6a2 2 0 0 1 2-2h1"/></svg></span>
+        <h3>Spanish &amp; Pistachio Lattes</h3>
+        <p>Hot or iced, bold — from the Spanish iced latte to pistachio and coconut lattes.</p>
+        <span class="tag">Hot or Iced</span>
+      </article>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <h3>Artisanal Teas</h3>
+        <p>A praised tea selection — including the refreshing pomegranate tea visitors rave about.</p>
+        <span class="tag">Great Tea Selection</span>
+      </article>
+      <article class="menu-card reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 1 4 1 2.5-1 4-1 2.5 1 4 1 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg></span>
+        <h3>Cakes &amp; Sweets</h3>
+        <p>Saffron cake, lotus cheesecake, tiramisu — baked goods that earn consistent praise.</p>
+        <span class="tag">Great Dessert</span>
+      </article>
+    </div>
+    <p class="menu-note reveal">A glimpse of the counter only — the full menu is available at the café.</p>
+  </div>
+</section>
+
+<!-- ============ WHY KAF ============ -->
+<section class="section why-section on-dark" id="why">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Why Visit</p>
+      <h2>More than a <em>coffee stop</em></h2>
+    </div>
+    <div class="feature-grid" data-stagger>
+      <div class="feature reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></span>
+        <h3>Turkish &amp; Arabic Specialty</h3>
+        <p>Authentic Turkish coffee and spiced Arabic blends — the café’s recognised signature in Islamabad.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+        <h3>Cozy, Earthy Ambience</h3>
+        <p>An atmosphere guests say “beautifully balances elegance with comfort,” with authentic Arab vibes.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+        <h3>Terrace Seating</h3>
+        <p>A lovely café terrace in F-6 Markaz — made for slow evenings and good conversation.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <h3>Open Late, Every Day</h3>
+        <p>9 AM to midnight, daily — morning coffee, afternoon catch-ups or late-day cravings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUEST WORDS ============ -->
+<section class="section" id="words">
+  <div class="container">
+    <div class="quote-head reveal">
+      <div>
+        <p class="eyebrow">Guest Words</p>
+        <h2>What visitors <em>say</em></h2>
+      </div>
+      <span class="badge">★ 4.7 on Tripadvisor</span>
+    </div>
+    <div class="quote-grid" data-stagger>
+      <article class="quote-card reveal">
+        <blockquote>So far my favourite coffee in Pakistan! 10/10 flat white — super smooth and creamy, with a very delicate flavour.</blockquote>
+        <cite>— Guest review · Tripadvisor</cite>
+      </article>
+      <article class="quote-card reveal">
+        <blockquote>The moment I stepped in, I was struck by the ambience — an atmosphere that beautifully balances elegance with comfort.</blockquote>
+        <cite>— Google review · Feb 2026</cite>
+      </article>
+      <article class="quote-card reveal">
+        <blockquote>Nice café with a terrace, a choice of hot drinks from espresso through tea to Turkish/Arabic coffee. Very nice setting, good service.</blockquote>
+        <cite>— TripAdvisor review · Jun 2026</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow-serif">The space &amp; the cup</p>
+      <h2>Feel of <em>KAF</em></h2>
+      <p class="lede">Illustrative preview imagery evoking the KAF experience — earthy interiors, terrace evenings and traditional service.</p>
+    </div>
+    <div class="gallery-grid" data-stagger>
+      <figure class="wide reveal"><!-- Illustrative preview image — not an actual photo of KAF Coffee -->
+        <img src="images/kaf-interior.jpg" alt="Earthy terracotta-toned café interior with arched alcoves and warm brass pendant lights" loading="lazy">
+        <figcaption>Earthy, elegant interiors</figcaption>
+      </figure>
+      <figure class="reveal"><!-- Illustrative preview image -->
+        <img src="images/kaf-kahwa.jpg" alt="Arabic qahwa poured from a brass dallah into finjan cups beside dates" loading="lazy">
+        <figcaption>Qahwa, served the traditional way</figcaption>
+      </figure>
+      <figure class="reveal"><!-- Illustrative preview image -->
+        <img src="images/kaf-terrace.jpg" alt="Café terrace at dusk with warm string lights and wooden tables" loading="lazy">
+        <figcaption>Evenings on the terrace</figcaption>
+      </figure>
+      <figure class="wide reveal"><!-- Illustrative preview image -->
+        <img src="images/kaf-desserts.jpg" alt="Saffron cake and lotus cheesecake slices with a pistachio latte" loading="lazy">
+        <figcaption>Saffron cake · lotus cheesecake · pistachio latte</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="section" id="visit">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Plan Your Visit</p>
+      <h2>Find us in <em>F-6 Markaz</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="info-list reveal" data-stagger>
+        <div class="info-item">
+          <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h3>Address</h3>
+            <p>Roomy Signature Hotel, Super Market, Block 7,<br>Agha Khan Road, F-6 Markaz, Islamabad 44000</p>
+            <p><a class="link-underline" href="https://www.google.com/maps/search/?api=1&query=KAF+Coffee,+Roomy+Signature+Hotel,+F-6+Markaz,+Islamabad" target="_blank" rel="noopener">Open in Google Maps ↗</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27 1.27a2 2 0 0 1 .45 2.11L19.09 14.8a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+923100577770">+92 310 0577770</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div>
+            <h3>Hours</h3>
+            <p>Open daily · 9:00 AM – 12:00 AM <em>(as listed on @kaf_pk)</em></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+          <div>
+            <h3>Follow KAF</h3>
+            <div class="socials">
+              <a class="social-btn" href="https://www.instagram.com/kaf_pk/" target="_blank" rel="noopener" aria-label="KAF Coffee on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a class="social-btn" href="https://www.facebook.com/kafcoffeepk/" target="_blank" rel="noopener" aria-label="KAF Coffee on Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+            <p class="mt-2">@kaf_pk · facebook.com/kafcoffeepk</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe title="Map showing KAF Coffee at Roomy Signature Hotel, F-6 Markaz, Islamabad" src="https://www.google.com/maps?q=KAF%20Coffee%2C%20Roomy%20Signature%20Hotel%2C%20F-6%20Markaz%2C%20Islamabad&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="cta-band reveal">
+      <span class="ar">كل ساعة هي ساعة كاف</span>
+      <h2>Every hour is KAF hour.</h2>
+      <p>Morning coffee, afternoon catch-ups, or late-day cravings — the cezve is on and the terrace lights are up, daily from 9 AM till midnight.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+923100577770">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27 1.27a2 2 0 0 1 .45 2.11L19.09 14.8a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/kaf_pk/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          @kaf_pk on Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">KAF<span class="ar">قهوة مختصة</span></p>
+        <p class="mt-4">This is a free preview site built by Adnan Ahmad, showcasing what KAF Coffee’s website could look like — not affiliated with the business. All business details sourced from KAF’s public Instagram, Facebook and map listings.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">The Counter</a></li>
+          <li><a href="#why">Why KAF</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+923100577770">+92 310 0577770</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=KAF+Coffee,+Roomy+Signature+Hotel,+F-6+Markaz,+Islamabad" target="_blank" rel="noopener">F-6 Markaz, Islamabad</a></li>
+          <li><a href="https://www.instagram.com/kaf_pk/" target="_blank" rel="noopener">Instagram · @kaf_pk</a></li>
+          <li><a href="https://www.facebook.com/kafcoffeepk/" target="_blank" rel="noopener">Facebook · kafcoffeepk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>Preview concept, design &amp; build by <strong>Adnan Ahmad</strong></span>
+      <span>Imagery is illustrative preview work — not the business’s actual photos.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var root = document.documentElement;
+  var banner = document.getElementById('previewBanner');
+  var head = document.getElementById('siteHead');
+  var nav = document.getElementById('siteNav');
+  var menuBtn = document.getElementById('menuBtn');
+
+  /* Banner offset -> header position */
+  function setBannerVar(){
+    root.style.setProperty('--banner-h', banner.classList.contains('dismissed') ? '0px' : banner.offsetHeight + 'px');
+  }
+  setBannerVar();
+  window.addEventListener('resize', setBannerVar);
+  document.getElementById('bannerClose').addEventListener('click', function(){
+    banner.classList.add('dismissed');
+    setBannerVar();
+  });
+
+  /* Sticky header state */
+  function onScroll(){ head.classList.toggle('scrolled', window.scrollY > 24); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Mobile nav */
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.closest('a')){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  /* Scroll reveal + stagger */
+  document.querySelectorAll('[data-stagger]').forEach(function(group){
+    Array.prototype.forEach.call(group.children, function(child, i){
+      child.style.transitionDelay = (i * 80) + 'ms';
+    });
+  });
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if(reduced || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Scrollspy for nav */
+  var links = document.querySelectorAll('.nav-link');
+  var sections = [];
+  links.forEach(function(l){
+    var s = document.querySelector(l.getAttribute('href'));
+    if(s) sections.push([s, l]);
+  });
+  if('IntersectionObserver' in window){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          var match = sections.find(function(p){ return p[0] === entry.target; });
+          if(match) match[1].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(function(p){ spy.observe(p[0]); });
+  }
+})();
+</script>
+</body>
+</html>
